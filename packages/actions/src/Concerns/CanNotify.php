@@ -13,14 +13,19 @@ trait CanNotify
 
     protected string | Closure | null $failureNotificationTitle = null;
 
+    protected string | Closure | null $failureNotificationBody = null;
+
     protected string | Closure | null $successNotificationTitle = null;
+
+    protected string | Closure | null $successNotificationBody = null;
 
     public function sendFailureNotification(): static
     {
         $notification = $this->evaluate($this->failureNotification, [
             'notification' => Notification::make()
                 ->danger()
-                ->title($this->getFailureNotificationTitle()),
+                ->title($this->getFailureNotificationTitle())
+                ->body($this->getFailureNotificationBody()),
         ]);
 
         if (filled($notification?->getTitle())) {
@@ -52,12 +57,20 @@ trait CanNotify
         return $this;
     }
 
+    public function failureNotificationBody(string | Closure | null $body): static
+    {
+        $this->failureNotificationBody = $body;
+
+        return $this;
+    }
+
     public function sendSuccessNotification(): static
     {
         $notification = $this->evaluate($this->successNotification, [
             'notification' => Notification::make()
                 ->success()
-                ->title($this->getSuccessNotificationTitle()),
+                ->title($this->getSuccessNotificationTitle())
+                ->body($this->getSuccessNotificationBody()),
         ]);
 
         if (filled($notification?->getTitle())) {
@@ -89,13 +102,30 @@ trait CanNotify
         return $this;
     }
 
+    public function successNotificationBody(string | Closure | null $body): static
+    {
+        $this->successNotificationBody = $body;
+
+        return $this;
+    }
+
     public function getSuccessNotificationTitle(): ?string
     {
         return $this->evaluate($this->successNotificationTitle);
     }
 
+    public function getSuccessNotificationBody(): ?string
+    {
+        return $this->evaluate($this->successNotificationBody);
+    }
+
     public function getFailureNotificationTitle(): ?string
     {
         return $this->evaluate($this->failureNotificationTitle);
+    }
+
+    public function getFailureNotificationBody(): ?string
+    {
+        return $this->evaluate($this->failureNotificationBody);
     }
 }
