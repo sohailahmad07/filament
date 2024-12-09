@@ -57,6 +57,13 @@ DeleteAction::make()
     ->successNotificationTitle('User deleted')
 ```
 
+To customize the body of this notification, use the `successNotificationBody()` method:
+
+```php
+DeleteAction::make()
+    ->successNotificationBody('The user has been successfully deleted')
+```
+
 You may customize the entire notification using the `successNotification()` method:
 
 ```php

@@ -57,6 +57,13 @@ RestoreAction::make()
     ->successNotificationTitle('User restored')
 ```
 
+To customize the body of this notification, use the `successNotificationBody()` method:
+
+```php
+RestoreAction::make()
+    ->successNotificationBody('The user has been restore back with it data')
+```
+
 You may customize the entire notification using the `successNotification()` method:
 
 ```php

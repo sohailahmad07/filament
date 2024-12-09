@@ -57,6 +57,13 @@ ForceDeleteAction::make()
     ->successNotificationTitle('User force-deleted')
 ```
 
+To customize the body of this notification, use the `successNotificationBody()` method:
+
+```php
+ForceDeleteAction::make()
+    ->successNotificationBody('The user has been permanently deleted')
+```
+
 You may customize the entire notification using the `successNotification()` method:
 
 ```php

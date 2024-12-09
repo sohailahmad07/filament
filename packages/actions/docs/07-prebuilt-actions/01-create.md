@@ -101,6 +101,13 @@ CreateAction::make()
     ->successNotificationTitle('User registered')
 ```
 
+To customize the body of this notification, use the `successNotificationBody()` method:
+
+```php
+CreateAction::make()
+    ->successNotificationBody('The user has been successfully registered!')
+```
+
 You may customize the entire notification using the `successNotification()` method:
 
 ```php

@@ -82,6 +82,13 @@ ReplicateAction::make()
     ->successNotificationTitle('Category replicated')
 ```
 
+To customize the body of this notification, use the `successNotificationBody()` method:
+
+```php
+ReplicateAction::make()
+    ->successNotificationBody('The category has been successfully replicated')
+```
+
 You may customize the entire notification using the `successNotification()` method:
 
 ```php

@@ -114,6 +114,13 @@ EditAction::make()
     ->successNotificationTitle('User updated')
 ```
 
+To customize the body of this notification, use the `successNotificationBody()` method:
+
+```php
+EditAction::make()
+    ->successNotificationBody('The user has been successfully updated!')
+```
+
 You may customize the entire notification using the `successNotification()` method:
 
 ```php
