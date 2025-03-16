@@ -33,7 +33,7 @@
                 'role' => 'tabpanel',
             ], escape: false)
             ->merge($getExtraAttributes(), escape: false)
-            ->class(['fi-fo-wizard-step outline-none'])
+            ->class(['fi-fo-wizard-step outline-hidden'])
     }}
 >
     {{ $getChildComponentContainer() }}

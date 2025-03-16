@@ -220,7 +220,7 @@
                                                     ],
                                                 ] as $input)
                                                     <label
-                                                        class="flex w-full items-center rounded-lg border border-gray-300 bg-gray-100 text-sm shadow-sm dark:border-gray-700 dark:bg-gray-800"
+                                                        class="flex w-full items-center rounded-lg border border-gray-300 bg-gray-100 text-sm shadow-xs dark:border-gray-700 dark:bg-gray-800"
                                                     >
                                                         <span
                                                             class="flex w-20 shrink-0 items-center justify-center self-stretch border-e border-gray-300 px-2 dark:border-gray-700"

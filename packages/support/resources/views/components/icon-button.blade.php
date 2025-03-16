@@ -43,7 +43,7 @@
     }
 
     $buttonClasses = \Illuminate\Support\Arr::toCssClasses([
-        'fi-icon-btn relative flex items-center justify-center rounded-lg outline-none transition duration-75 focus-visible:ring-2',
+        'fi-icon-btn relative flex items-center justify-center rounded-lg outline-hidden transition duration-75 focus-visible:ring-2',
         'pointer-events-none opacity-70' => $disabled,
         ...match ($size) {
             ActionSize::ExtraSmall => [

@@ -27,7 +27,7 @@
                 'wire:key' => "{$this->getId()}.{$getStatePath()}." . \Filament\Forms\Components\Tabs\Tab::class . ".tabs.{$id}",
             ], escape: false)
             ->merge($getExtraAttributes(), escape: false)
-            ->class(['fi-fo-tabs-tab outline-none'])
+            ->class(['fi-fo-tabs-tab outline-hidden'])
     }}
 >
     {{ $getChildComponentContainer() }}
